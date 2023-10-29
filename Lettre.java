@@ -30,12 +30,12 @@ public class Lettre extends Courrier {
     }
     @Override
     public double affranchir(){
-        double montant=super.affranchir();
+        double montant=0;
         if(Objects.equals(format, "A3")){
-            montant+=3.50+tarif*poids/1000;
+            montant=3.50+tarif*poids/1000;
         }
         else if(Objects.equals(format, "A4")){
-            montant+=2.50+tarif*poids/1000;
+            montant=2.50+tarif*poids/1000;
         }
         return montant;
     }
